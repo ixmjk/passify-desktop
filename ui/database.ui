@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>698</width>
+    <height>513</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::DoubleClicked</set>
+      </property>
+      <column>
+       <property name="text">
+        <string>Title</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignLeading|AlignTop</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>User Name</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignLeading|AlignTop</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Password</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignLeading|AlignTop</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>URL</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignLeading|AlignTop</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Notes</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignLeading|AlignTop</set>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>id</string>
+       </property>
+       <property name="textAlignment">
+        <set>AlignLeading|AlignTop</set>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLineEdit" name="searchBar">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="placeholderText">
+       <string>Search...</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>698</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExport"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="action_about"/>
+   </widget>
+   <widget class="QMenu" name="menuEntry">
+    <property name="title">
+     <string>Entry</string>
+    </property>
+    <addaction name="actionReload"/>
+    <addaction name="separator"/>
+    <addaction name="actionAddEntry"/>
+    <addaction name="actionEditEntry"/>
+    <addaction name="actionDeleteEntry"/>
+   </widget>
+   <widget class="QMenu" name="menuAccount">
+    <property name="title">
+     <string>Account</string>
+    </property>
+    <addaction name="actionProfile"/>
+    <addaction name="separator"/>
+    <addaction name="actionSignOut"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionPasswordGenerator"/>
+   </widget>
+   <widget class="QMenu" name="menuPreferences">
+    <property name="title">
+     <string>Preferences</string>
+    </property>
+    <widget class="QMenu" name="menuSelect_Theme">
+     <property name="title">
+      <string>Select Theme...</string>
+     </property>
+     <addaction name="actionLightTheme"/>
+     <addaction name="actionDarkTheme"/>
+    </widget>
+    <addaction name="menuSelect_Theme"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEntry"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuAccount"/>
+   <addaction name="menuPreferences"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionImport">
+   <property name="text">
+    <string>Import...</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="text">
+    <string>Export...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="text">
+    <string>About Passify</string>
+   </property>
+  </action>
+  <action name="actionAddEntry">
+   <property name="text">
+    <string>Add Entry...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionEditEntry">
+   <property name="text">
+    <string>Edit Entry...</string>
+   </property>
+   <property name="shortcut">
+    <string>Return</string>
+   </property>
+  </action>
+  <action name="actionDeleteEntry">
+   <property name="text">
+    <string>Delete Entry</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionReload">
+   <property name="text">
+    <string>Reload</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionProfile">
+   <property name="text">
+    <string>Profile</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionChangePassword">
+   <property name="text">
+    <string>Change Password</string>
+   </property>
+  </action>
+  <action name="actionSignOut">
+   <property name="text">
+    <string>Sign out</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionPasswordGenerator">
+   <property name="text">
+    <string>Password Generator</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="actionLightTheme">
+   <property name="text">
+    <string>Light Theme</string>
+   </property>
+  </action>
+  <action name="actionDarkTheme">
+   <property name="text">
+    <string>Dark Theme</string>
+   </property>
+  </action>
+  <action name="actionImportFromFile">
+   <property name="text">
+    <string>Import...</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
